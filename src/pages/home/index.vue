@@ -1,13 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-  <Logos />
-  <InputEntry />
+  <view>home</view>
 </template>
 
-<style></style>
-
-<route lang="json">
+<route lang="json" type="home">
 {
   "style": {
     "navigationStyle": "default",

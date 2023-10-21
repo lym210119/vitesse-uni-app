@@ -1,13 +1,33 @@
 {
   "pages": [
     {
-      "path": "pages/index",
-      "type": "home"
+      "path": "pages/home/index",
+      "type": "home",
+      "style": {
+        "navigationStyle": "default",
+        "navigationBarTitleText": "首页"
+      }
     },
     {
       "path": "pages/hi",
       "type": "page",
       "layout": "home"
+    },
+    {
+      "path": "pages/index",
+      "type": "page",
+      "style": {
+        "navigationStyle": "default",
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/mine/index",
+      "type": "page",
+      "style": {
+        "navigationStyle": "default",
+        "navigationBarTitleText": "我的"
+      }
     }
   ],
   "globalStyle": {
@@ -19,6 +39,26 @@
     "navigationBarTextStyle": "@navTxtStyle",
     "navigationBarTitleText": "Vitess-Uni",
     "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#CCCED5",
+    "selectedColor": "#5A7EF8",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/home-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "static/tabbar/mine.png",
+        "selectedIconPath": "static/tabbar/mine.png",
+        "text": "我的"
+      }
+    ]
   },
   "subPackages": []
 }
