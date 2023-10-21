@@ -5,7 +5,8 @@
       "type": "home",
       "style": {
         "navigationStyle": "default",
-        "navigationBarTitleText": "首页"
+        "navigationBarTitleText": "首页",
+        "backgroundColor": "#F5F5F7"
       }
     },
     {
