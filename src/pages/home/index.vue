@@ -13,22 +13,22 @@ const workData = reactive([
   <view class="relative bg-[#F5F5F7]">
     <image class="absolute left-0 right-0 z-1 w-full" src="/static/images/10621@2x.png" style="width: 100%" />
 
-    <view class="relative z-2 px-[32rpx] py-[42rpx]">
+    <view class="relative z-2 px-4 py-5.25">
       <view class="header flex items-center justify-between">
         <view>
-          <view class="header-title">
+          <view class="text-lg font-bold color-black">
             武汉锦辰数科技术有限公司
           </view>
-          <view class="header-desc">
+          <view class="bg-tag mt-1.5 inline-block rounded-[100rpx] px-[16rpx] py-[4rpx] text-xs">
             电子签剩余
-            <text class="sign-count">
+            <text class="text-sm font-bold color-[#5a7ef8]">
               2000
             </text>
             份
           </view>
         </view>
-        <view class="header-logo">
-          <image src="/static/vite.png" mode="scaleToFill" style="width: 108rpx; height: 108rpx" />
+        <view class="h-14 w-14 rounded-full bg-white">
+          <image class="h-14 w-14" src="/static/vite.png" mode="scaleToFill" />
         </view>
       </view>
 
@@ -37,12 +37,12 @@ const workData = reactive([
           工作台
         </view>
         <view class="section-content">
-          <view class="work-data">
-            <view v-for="item in workData" :key="item.id" class="work-data-item">
-              <view class="work-data-val">
+          <view class="flex items-center justify-between rounded-md bg-white p-5">
+            <view v-for="item in workData" :key="item.id" class="basis-1/4">
+              <view class="text-center text-xl font-bold">
                 {{ item.value }}
               </view>
-              <view class="work-data-label">
+              <view class="mt-1 text-center text-xs font-normal text-gray">
                 {{ item.label }}
               </view>
             </view>
@@ -55,60 +55,67 @@ const workData = reactive([
           合同模板
         </view>
         <view class="section-content">
-          <view class="template">
-            <view class="template-left">
-              <view class="company">
-                <view class="template-info">
-                  <view class="template-title flex-row">
-                    <view>企业模板</view>
-                    <u-icon name="arrow-right" size="14" color="#909399" />
+          <view class="w-full flex">
+            <view class="mr-2 basis-2/3">
+              <view class="tpl-left company">
+                <view class="relative z-2 ml-4">
+                  <view class="flex">
+                    <view class="text-sm font-normal">
+                      企业模板
+                    </view>
+                    <text class="i-carbon:chevron-right text-gray" />
                   </view>
-                  <view class="template-desc">
+                  <view class="text-xs text-gray">
                     企业发布的模板方案
                   </view>
                 </view>
-                <view class="image">
+                <view class="tpl-image">
                   <image
+                    class="h-[120rpx] w-[140rpx]"
                     src="/static/images/209@2x.png"
                     mode="scaleToFill"
                     style="width: 140rpx; height: 120rpx"
                   />
                 </view>
               </view>
-              <view class="system">
-                <view class="template-info">
-                  <view class="template-title flex-row">
-                    <view>系统模板</view>
-                    <u-icon name="arrow-right" size="14" color="#909399" />
+              <view class="tpl-left system">
+                <view class="relative z-2 ml-4">
+                  <view class="flex">
+                    <view class="text-normal text-sm">
+                      系统模板
+                    </view>
+                    <text class="i-carbon:chevron-right text-gray" />
                   </view>
-                  <view class="template-desc">
+                  <view class="text-xs text-gray">
                     系统预设多种模板方案
                   </view>
                 </view>
-                <view class="image">
+                <view class="tpl-image">
                   <image
+                    class="h-[120rpx] w-[140rpx]"
                     src="/static/images/210@2x.png"
                     mode="scaleToFill"
-                    style="width: 140rpx; height: 120rpx"
                   />
                 </view>
               </view>
             </view>
-            <view class="template-right">
-              <view class="template-info" style="margin-top: 24rpx">
-                <view class="template-title flex-row">
-                  <view>本地合同</view>
-                  <u-icon name="arrow-right" size="14" color="#909399" />
+            <view class="tpl-right basis-1/3">
+              <view class="ml-4 mt-3">
+                <view class="flex">
+                  <view class="text-sm font-normal">
+                    本地合同
+                  </view>
+                  <text class="i-carbon:chevron-right text-gray" />
                 </view>
-                <view class="template-desc">
+                <view class="text-xs font-normal text-gray">
                   创建合同
                 </view>
               </view>
-              <view class="local-image">
+              <view class="absolute bottom-0 right-0 h-[176rpx] w-[160rpx]">
                 <image
+                  class="h-[176rpx] w-[160rpx]"
                   src="/static/images/212@2x.png"
                   mode="scaleToFill"
-                  style="width: 160rpx; height: 176rpx"
                 />
               </view>
             </view>
@@ -122,39 +129,39 @@ const workData = reactive([
         </view>
         <view class="section-body">
           <view class="file-list">
-            <view v-for="item in 10" :key="item" class="file-item">
-              <view class="red file-state">
+            <view v-for="item in 10" :key="item" class="relative mb-3 rounded-lg bg-white p-3">
+              <view class="clip-path absolute right-0 top-0 h-[48rpx] w-[138rpx] rounded-tr-lg bg-[#ff503d] text-center text-xs font-bold leading-[48rpx] color-white">
                 审批驳回
               </view>
 
-              <view class="file-name">
+              <view class="text-base font-bold">
                 《居间服务协议》
               </view>
-              <view class="file-created">
+              <view class="mt-1 text-xs font-normal text-gray">
                 张力于2023年04月11日 12:21发起
               </view>
-              <view class="file-divider" />
-              <view class="file-info-item">
-                <text class="file-info-label">
+              <view class="mb-3 mt-3 h-[2rpx] bg-[#eeeeee]" />
+              <view class="mb-1 last:mb-0">
+                <text class="inline-block w-[144rpx] text-sm text-gray">
                   发起方
                 </text>
-                <text class="file-info-value">
+                <text class="text-sm">
                   武汉申贷网络有限公司
                 </text>
               </view>
-              <view class="file-info-item">
-                <text class="file-info-label">
+              <view class="mb-1 last:mb-0">
+                <text class="inline-block w-[144rpx] text-sm text-gray">
                   接收方
                 </text>
-                <text class="file-info-value">
+                <text class="text-sm">
                   张丽然
                 </text>
               </view>
-              <view class="file-info-item">
-                <text class="file-info-label">
+              <view class="mb-1 last:mb-0">
+                <text class="inline-block w-[144rpx] text-sm text-gray">
                   合同编号
                 </text>
-                <text class="file-info-value">
+                <text class="text-sm">
                   XY37738229001
                 </text>
               </view>
@@ -167,203 +174,38 @@ const workData = reactive([
 </template>
 
 <style scoped>
-.file-item {
-  position: relative;
-  padding: 24rpx 32rpx;
-  margin-bottom: 24rpx;
-  background: #ffffff;
-  border-radius: 12rpx 12rpx 12rpx 12rpx;
-}
-.file-item .file-state {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 138rpx;
-  height: 48rpx;
-  line-height: 48rpx;
-  text-align: center;
-  font-size: 22rpx;
-  font-family: PingFang SC-Bold, PingFang SC;
-  font-weight: bold;
-  color: #ffffff;
-  border-top-right-radius: 12rpx;
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 5% 100%);
-}
-.file-item .file-state.red {
-  background-color: #ff503d;
-}
-.file-item .file-name {
-  font-size: 32rpx;
-  font-family: PingFang SC-Bold, PingFang SC;
-  font-weight: bold;
-  color: #303133;
-}
-.file-item .file-created {
-  margin-top: 4rpx;
-  font-size: 24rpx;
-  font-family: PingFang SC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #909399;
-}
-.file-item .file-divider {
-  margin: 24rpx 0 20rpx;
-  height: 2rpx;
-  background-color: #eeeeee;
-}
-.file-item .file-info-item {
-  margin-bottom: 8rpx;
-}
-.file-item .file-info-item:last-child {
-  margin-bottom: 0;
-}
-.file-item .file-info-item .file-info-label {
-  display: inline-block;
-  width: 144rpx;
-  font-size: 26rpx;
-  font-family: PingFang SC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #909399;
-}
-.file-item .file-info-item .file-info-value {
-  font-size: 26rpx;
-  font-family: PingFang SC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #606266;
+.bg-tag {
+  background: linear-gradient(90deg, rgba(90, 126, 248, 0) 0%, rgba(90, 126, 248, 0.12) 100%);
 }
 
-.template {
-  display: flex;
+.clip-path {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 5% 100%);
 }
-.template .template-left {
-  margin-right: 16rpx;
-  flex: 2;
+
+.tpl-left {
+  --at-apply: relative flex justify-between items-center h-[120rpx] box-content border border-solid border-[#ffffff]
 }
-.template .template-left .company,
-.template .template-left .system {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 120rpx;
-  border: 2rpx solid #ffffff;
-  box-sizing: content-box;
+.tpl-image {
+  --at-apply: absolute top-0 right-0 w-[140rpx] h-[120rpx]
 }
-.template .template-left .company .image,
-.template .template-left .system .image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 140rpx;
-  height: 120rpx;
-}
-.template .template-left .company {
+.tpl-left.company {
   margin-bottom: 16rpx;
   background: linear-gradient(135deg, #ffffff 0%, #f1f4ff 100%);
   border-radius: 12rpx 12rpx 12rpx 12rpx;
 }
-.template .template-left .system {
+.tpl-left.system {
   background: linear-gradient(135deg, #ffffff 0%, #fff6ef 100%);
   border-radius: 12rpx 12rpx 12rpx 12rpx;
 }
-.template .template-info {
-  margin-left: 32rpx;
+.tpl-right {
   position: relative;
-  z-index: 2;
-}
-.template .template-info .template-title {
-  font-size: 28rpx;
-  font-family: PingFang SC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #303133;
-}
-.template .template-info .template-desc {
-  font-size: 22rpx;
-  font-family: PingFang SC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #a8abb2;
-}
-.template .template-right {
-  position: relative;
-  flex: 1;
   background: linear-gradient(135deg, #ffffff 0%, #f2fff7 100%);
   border-radius: 12rpx 12rpx 12rpx 12rpx;
   border: 2rpx solid #ffffff;
 }
-.template .template-right .local-image {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 160rpx;
-  height: 176rpx;
-}
-.template .template-right .template-info {
-  margin-top: 24prx;
-}
 
 .section-title {
-  margin: 48rpx 0 24rpx;
-  font-size: 30rpx;
-  font-family: PingFang SC-Bold, PingFang SC;
-  font-weight: bold;
-  color: #303133;
-}
-
-.work-data {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40rpx;
-  background-color: #fff;
-  border-radius: 12rpx;
-}
-.work-data .work-data-item {
-  flex-basis: 25%;
-}
-.work-data .work-data-item .work-data-val {
-  text-align: center;
-  font-size: 40rpx;
-  font-family: DIN-Bold, DIN;
-  font-weight: bold;
-  color: #303133;
-}
-.work-data .work-data-item .work-data-label {
-  margin-top: 8rpx;
-  text-align: center;
-  font-size: 22rpx;
-  font-family: PingFang SC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #909399;
-}
-
-.sign-page .page-content .header .header-logo {
-  height: 108rpx;
-  width: 108rpx;
-  border-radius: 50%;
-  background-color: #fff;
-  overflow: hidden;
-}
-.sign-page .page-content .header .header-title {
-  font-size: 36rpx;
-  font-family: PingFang SC-Bold, PingFang SC;
-  font-weight: bold;
-  color: #303133;
-}
-.sign-page .page-content .header .header-desc {
-  margin-top: 12rpx;
-  display: inline-block;
-  padding: 4rpx 16rpx;
-  font-size: 20rpx;
-  font-family: PingFang SC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #303133;
-  background: linear-gradient(90deg, rgba(90, 126, 248, 0) 0%, rgba(90, 126, 248, 0.12) 100%);
-  border-radius: 100rpx 100rpx 100rpx 100rpx;
-}
-.sign-page .page-content .header .header-desc .sign-count {
-  font-size: 26rpx;
-  font-family: DIN-Bold, DIN;
-  font-weight: bold;
-  color: #5a7ef8;
+  --at-apply: text-base font-bold text-gray-800 mt-[48rpx] mb-[24rpx]
 }
 </style>
 

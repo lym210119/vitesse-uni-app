@@ -9,8 +9,7 @@ export default defineUniPages({
     backgroundTextStyle: '@bgTxtStyle',
     navigationBarBackgroundColor: '#000000',
     navigationBarTextStyle: '@navTxtStyle',
-    navigationBarTitleText: 'Vitess-Uni',
-    navigationStyle: 'custom',
+    navigationBarTitleText: '电子签',
   },
   tabBar: {
     color: '#CCCED5',
@@ -19,7 +18,7 @@ export default defineUniPages({
     backgroundColor: '#ffffff',
     list: [{
       pagePath: 'pages/home/index',
-      iconPath: 'static/tabbar/home.png',
+      iconPath: 'static/tabbar/home-active.png',
       selectedIconPath: 'static/tabbar/home-active.png',
       text: '首页',
     }, {
