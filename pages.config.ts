@@ -10,6 +10,7 @@ export default defineUniPages({
     navigationBarBackgroundColor: '#000000',
     navigationBarTextStyle: '@navTxtStyle',
     navigationBarTitleText: '电子签',
+    navigationStyle: 'custom',
   },
   tabBar: {
     color: '#CCCED5',
@@ -18,13 +19,23 @@ export default defineUniPages({
     backgroundColor: '#ffffff',
     list: [{
       pagePath: 'pages/home/index',
-      iconPath: 'static/tabbar/home-active.png',
-      selectedIconPath: 'static/tabbar/home-active.png',
+      iconPath: 'static/images/tabbar/index.png',
+      selectedIconPath: 'static/images/tabbar/index-active.png',
       text: '首页',
     }, {
-      pagePath: 'pages/mine/index',
-      iconPath: 'static/tabbar/mine.png',
-      selectedIconPath: 'static/tabbar/mine.png',
+      pagePath: 'pages/audit/index',
+      iconPath: 'static/images/tabbar/audit.png',
+      selectedIconPath: 'static/images/tabbar/audit-active.png',
+      text: '审批',
+    }, {
+      pagePath: 'pages/contract/index',
+      iconPath: 'static/images/tabbar/contract.png',
+      selectedIconPath: 'static/images/tabbar/contract-active.png',
+      text: '合同',
+    }, {
+      pagePath: 'pages/my/index',
+      iconPath: 'static/images/tabbar/my.png',
+      selectedIconPath: 'static/images/tabbar/my-active.png',
       text: '我的',
     }],
   },
